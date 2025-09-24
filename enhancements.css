@@ -1848,4 +1848,311 @@ button:focus {
     .quote-icon {
         font-size: 2rem;
     }
+
+}
+
+
+/* ==================== ESTILOS DE LA SECCIÓN DE UBICACIÓN ==================== */
+
+.location-section {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    position: relative;
+}
+
+.location-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 20px,
+        rgba(52, 152, 219, 0.02) 20px,
+        rgba(52, 152, 219, 0.02) 40px
+    );
+    pointer-events: none;
+}
+
+.location-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 4rem;
+    align-items: start;
+}
+
+.map-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.map-container {
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.address-card,
+.schedule-card,
+.navigation-buttons,
+.quick-contact,
+.location-tips {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.address-card h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.address-details p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.address {
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.zone {
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+.rating {
+    color: #f39c12;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.schedule-card h4,
+.navigation-buttons h4,
+.quick-contact h4,
+.location-tips h4 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.schedule-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.schedule-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.schedule-item.weekend {
+    background: #fff5f5;
+    color: #e74c3c;
+}
+
+.schedule-item.special {
+    background: #e8f5e8;
+    color: #27ae60;
+}
+
+.day {
+    font-weight: 600;
+}
+
+.time {
+    font-weight: 500;
+}
+
+.schedule-note {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #e3f2fd, #f8f9fa);
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    font-size: 0.9rem;
+    color: #2c3e50;
+}
+
+.nav-buttons-grid,
+.contact-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.nav-btn,
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.nav-btn.google-maps {
+    background: linear-gradient(135deg, #4285f4, #34a853);
+    color: white;
+}
+
+.nav-btn.waze {
+    background: linear-gradient(135deg, #33ccff, #0099cc);
+    color: white;
+}
+
+.nav-btn.apple-maps {
+    background: linear-gradient(135deg, #007aff, #0051d5);
+    color: white;
+}
+
+.contact-btn.plan-diario {
+    background: linear-gradient(135deg, #e3f2fd, #f8f9fa);
+    border-color: #3498db;
+    color: #2c3e50;
+}
+
+.contact-btn.plan-domingo {
+    background: linear-gradient(135deg, #f3e5f5, #f8f9fa);
+    border-color: #9b59b6;
+    color: #2c3e50;
+}
+
+.nav-btn:hover,
+.contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.nav-icon,
+.contact-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.nav-text,
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav-text strong,
+.contact-text strong {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.nav-text small,
+.contact-text small {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.tips-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tips-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #ecf0f1;
+    line-height: 1.6;
+    color: #5a6c7d;
+}
+
+.tips-list li:last-child {
+    border-bottom: none;
+}
+
+.tips-list strong {
+    color: #2c3e50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .location-section {
+        padding: 4rem 1rem;
+    }
+    
+    .location-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .map-container iframe {
+        height: 300px;
+    }
+    
+    .location-info {
+        gap: 1.5rem;
+    }
+    
+    .address-card,
+    .schedule-card,
+    .navigation-buttons,
+    .quick-contact,
+    .location-tips {
+        padding: 1.5rem;
+    }
+    
+    .schedule-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .nav-btn,
+    .contact-btn {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .address-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .address {
+        font-size: 1rem;
+    }
+    
+    .nav-buttons-grid,
+    .contact-buttons {
+        gap: 0.8rem;
+    }
 }
